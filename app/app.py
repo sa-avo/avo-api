@@ -6,11 +6,13 @@ import pandas as pd
 app = Flask(__name__)
 model = joblib.load(open('pipple_model.pkl', 'rb'))
 
+
 @app.route('/')
 def home():
     return render_template('index.html')
 
-@app.route('/predict',methods=['POST'])
+
+@app.route('/predict', methods=['POST'])
 def predict():
 
     int_features = [int(x) for x in request.form.values()]
@@ -20,9 +22,11 @@ def predict():
 
     output = round(prediction[0], 2)
 
-    return render_template('index.html', prediction_text='Flower Class should be {}'.format(output))
+    return render_template('index.html', prediction_text='Flower Class should \
+     be {}'.format(output))
 
-@app.route('/results',methods=['POST'])
+
+@app.route('/results', methods=['POST'])
 def results():
 
     data = request.get_json(force=True)
@@ -32,5 +36,6 @@ def results():
     output = prediction[0]
     return jsonify(output.tolist())
 
+
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(host='0.0.0.0')

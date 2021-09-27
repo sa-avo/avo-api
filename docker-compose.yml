@@ -10,3 +10,4 @@ services:
       - ./app:/app
     command: >
       sh -c "python app.py runserver 0.0.0.0:8000"
+      sh -c "python request.py migrate"

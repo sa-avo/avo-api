@@ -4,3 +4,4 @@ flake8
 numpy
 pandas
 sklearn
+requests<2.21

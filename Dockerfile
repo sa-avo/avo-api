@@ -12,4 +12,5 @@ RUN mkdir /app
 WORKDIR /app
 COPY ./app /app
 
-CMD ["python", "app.py"]
+EXPOSE 5000
+CMD ["python", "app.py", "-h", "0.0.0.0", "-p", "5000"]

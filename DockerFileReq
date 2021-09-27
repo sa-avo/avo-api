@@ -1,0 +1,16 @@
+FROM python:3.9.7-alpine
+
+MAINTAINER Tiaan Conradie
+
+ENV PYTHONUNBUFFERED 1
+
+RUN python -m pip install --upgrade pip
+RUN pip install requests
+
+RUN mkdir /app
+WORKDIR /app
+COPY ./app /app
+
+EXPOSE 5001
+
+CMD ["python", "request.py", "0.0.0.0", "-p", "5001"]

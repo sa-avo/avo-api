@@ -1,0 +1,18 @@
+{
+  "FlowerIrisResponseData": [
+       {"FlowerID": "0001",
+        "ReturnCode": "0",
+        "IrisClass": "Setosa"
+    },
+    {
+        "FlowerID": "0002",
+        "ReturnCode": "0",
+        "IrisClass": "Versicolor"
+    },
+    {
+        "FlowerID": "0003",
+        "ReturnCode": "0",
+        "IrisClass": "Virginica"
+    }
+]
+}
