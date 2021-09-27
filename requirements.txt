@@ -3,3 +3,4 @@ joblib
 flake8
 numpy
 pandas
+sklearn
