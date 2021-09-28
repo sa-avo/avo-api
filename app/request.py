@@ -2,8 +2,8 @@ import requests
 import json
 import generic_functions
 
-url = 'http://localhost:5000/results'
-server_url = 'http://localhost:5000/'
+url = 'http://172.17.0.2:5000/results'
+server_url = 'http://172.17.0.2:5000'
 
 def interface():
 
